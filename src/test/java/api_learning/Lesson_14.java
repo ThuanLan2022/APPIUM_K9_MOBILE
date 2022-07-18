@@ -20,7 +20,7 @@ public class Lesson_14 {
 
         try {
             // Init Appium session
-            URL appiumServer = new URL("http://192.168.1.56:4723/wd/hub");
+            URL appiumServer = new URL("http://localhost:4723/wd/hub");
             appiumDriver = new AndroidDriver<MobileElement>(appiumServer, desiredCapabilities);
 
             //DEBUG PURPOSE ONLY
