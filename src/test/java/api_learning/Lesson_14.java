@@ -25,7 +25,6 @@ public class Lesson_14 {
 
             //DEBUG PURPOSE ONLY
             Thread.sleep(3000);
-
         } catch (Exception e) {
             e.printStackTrace();
         }
