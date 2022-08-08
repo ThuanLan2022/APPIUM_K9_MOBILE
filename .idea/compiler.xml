@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="APPIUM_K9_MOBILE" target="1.7" />
+      <module name="APPIUM_K9_MOBILE" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
