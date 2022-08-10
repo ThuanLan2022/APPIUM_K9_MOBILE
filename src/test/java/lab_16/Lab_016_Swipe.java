@@ -1,4 +1,4 @@
-package api_learning;
+package lab_16;
 
 import driver.DriverFactory;
 import io.appium.java_client.AppiumDriver;
@@ -14,8 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class SwipeHorizontally {
-
+public class Lab_016_Swipe {
     //Implicit wait, Explicit wait
     public static void main(String[] args) {
 
