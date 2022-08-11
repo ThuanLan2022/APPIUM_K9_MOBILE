@@ -1,0 +1,30 @@
+package api_learning;
+
+import driver.DriverFactory;
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
+import mobles.pages.LoginScreenMod02;
+import mobles.pages.LoginScreenMod03;
+import org.openqa.selenium.Platform;
+
+public class LoginWithPOMMod03 {
+    public static void main(String[] args) throws InterruptedException {
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+
+        try {
+            //Navigator to Login screen
+            MobileElement navLoginScreen = appiumDriver.findElement(MobileBy.AccessibilityId("Login"));
+            navLoginScreen.click();
+
+            LoginScreenMod03 loginScreen = new LoginScreenMod03(appiumDriver);
+            loginScreen
+                    .inputUserName("teo@sth.com").inputPassword("12345678").clickOnLoginBtn();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        Thread.sleep(3000);
+        appiumDriver.quit();
+    }
+}
