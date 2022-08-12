@@ -1,4 +1,4 @@
-package mobles.pages;
+package models.pages;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;

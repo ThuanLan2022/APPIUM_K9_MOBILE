@@ -1,4 +1,4 @@
-package mobles.components.login;
+package models.components.login;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
@@ -16,11 +16,20 @@ public class LoginFormComponent {
     }
 
     public void inputUsername(String usernameTxt) {
-        if (!usernameTxt.isEmpty()) appiumDriver.findElement(usernameSel).sendKeys(usernameTxt);
+        if (!usernameTxt.isEmpty()) {
+            MobileElement usernameEl = appiumDriver.findElement(usernameSel);
+            usernameEl.clear();
+            usernameEl.sendKeys(usernameTxt);
+        }
     }
 
     public void inputPassword(String passwordTxt) {
-        if (!passwordTxt.isEmpty()) appiumDriver.findElement(passwordSel).sendKeys(passwordTxt);
+        if (!passwordTxt.isEmpty()) {
+            MobileElement passwordEl = appiumDriver.findElement(usernameSel);
+            passwordEl.clear();
+            passwordEl.sendKeys(passwordTxt);
+        }
+
     }
 
     public void clickOnLoginBtn() {
