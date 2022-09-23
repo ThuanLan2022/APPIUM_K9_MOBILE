@@ -3,9 +3,9 @@ package api_learning;
 import driver.DriverFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import models.components.global.BottomNavComponent;
-import models.components.login.LoginFormComponent;
-import models.pages.LoginScreen;
+import lab_16.models.components.global.BottomNavComponent;
+import lab_16.models.components.login.LoginFormComponent;
+import lab_16.models.pages.LoginScreen;
 import org.openqa.selenium.Platform;
 
 public class LoginWithComponents {

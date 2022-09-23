@@ -4,7 +4,7 @@ import driver.DriverFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
-import models.pages.LoginScreenMod02;
+import lab_16.models.pages.LoginScreenMod02;
 import org.openqa.selenium.Platform;
 
 public class LoginWithPOMMod02 {

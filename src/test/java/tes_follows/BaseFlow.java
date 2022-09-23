@@ -2,7 +2,7 @@ package tes_follows;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import models.pages.LoginScreen;
+import lab_16.models.pages.LoginScreen;
 
 public class BaseFlow {
 

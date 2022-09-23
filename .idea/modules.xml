@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../APPIUM_K9/APPIUM_K9.iml" filepath="$PROJECT_DIR$/../APPIUM_K9/APPIUM_K9.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/APPIUM_K9_MOBILE.iml" filepath="$PROJECT_DIR$/.idea/APPIUM_K9_MOBILE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/APPIUM_K9_MOBILE.iml" filepath="$PROJECT_DIR$/APPIUM_K9_MOBILE.iml" />
     </modules>
   </component>
 </project>

@@ -1,4 +1,4 @@
-package models.pages;
+package lab_16.models.pages;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;

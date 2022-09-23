@@ -1,9 +1,9 @@
-package models.pages;
+package lab_16.models.pages;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import models.components.global.BottomNavComponent;
-import models.components.login.LoginFormComponent;
+import lab_16.models.components.global.BottomNavComponent;
+import lab_16.models.components.login.LoginFormComponent;
 
 public class LoginScreen {
 
