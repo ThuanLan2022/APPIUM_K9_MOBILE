@@ -5,6 +5,7 @@ import io.appium.java_client.MobileElement;
 import lab_16.models.components.login.LoginFormComponent;
 import lab_16.models.pages.LoginScreen;
 import org.apache.commons.validator.routines.EmailValidator;
+import org.junit.Assert;
 import tes_follows.BaseFlow;
 
 public class LoginFlow extends BaseFlow {
@@ -65,17 +66,18 @@ public class LoginFlow extends BaseFlow {
     private void verifyIncorrectEmail(LoginFormComponent loginFormComp) {
        String actualInvalidEmailStr= loginFormComp.getInvalidEmailStr();
        String expectedInvalidEmailStr ="Please enter a valid email address";
+        Assert.assertEquals("[ERR] Invalid email str is not correct", expectedInvalidEmailStr, actualInvalidEmailStr);
+//        System.out.println("actualInvalidEmailStr: " + actualInvalidEmailStr);
+//        System.out.println("expectedInvalidEmailStr: " + expectedInvalidEmailStr);
 
-        System.out.println("actualInvalidEmailStr: " + actualInvalidEmailStr);
-        System.out.println("expectedInvalidEmailStr: " + expectedInvalidEmailStr);
     }
 
     private void verifyIncorrectPassword(LoginFormComponent loginFormComp) {
         String actualInvalidPasswordStr= loginFormComp.getInvalidPasswordStr();
         String expectedInvalidPasswordStr ="Please enter at least 8 characters";
-
-        System.out.println("actualInvalidPasswordStr: " + actualInvalidPasswordStr);
-        System.out.println("expectedInvalidPasswordStr: " + expectedInvalidPasswordStr);
+        Assert.assertEquals("[ERR] Invalid email str is not correct", expectedInvalidPasswordStr, actualInvalidPasswordStr);
+//        System.out.println("actualInvalidPasswordStr: " + actualInvalidPasswordStr);
+//        System.out.println("expectedInvalidPasswordStr: " + expectedInvalidPasswordStr);
     }
 
 }

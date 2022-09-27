@@ -2,6 +2,7 @@ package tests.testng;
 
 import org.junit.Assert;
 import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
 
 public class TestNGHooks02 extends BaseTestNG {
 
@@ -36,6 +37,19 @@ public class TestNGHooks02 extends BaseTestNG {
         // Hard assertion
        // Assert.assertEquals(actualResult, expectedResult);
         Assert.assertEquals(actualResult, expectedResult, expectedResult);
+        Assert.fail();
+    }
+
+    @Test
+    public void testSth04() {
+        //SoftAssert
+        String expectedResult = "a";
+        String actualResult = "b";
+
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(actualResult, expectedResult, "[ERR] Loi roi Teo oi");
+        softAssert.assertEquals(actualResult, expectedResult, "[ERR] Loi roi Ti oi");
+        softAssert.assertAll();
     }
 
     @AfterMethod
