@@ -1,4 +1,4 @@
-package tes_follows.authentication;
+package test_flows.authentication;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -6,7 +6,7 @@ import lab_16.models.components.login.LoginFormComponent;
 import lab_16.models.pages.LoginScreen;
 import org.apache.commons.validator.routines.EmailValidator;
 import org.junit.Assert;
-import tes_follows.BaseFlow;
+import test_flows.BaseFlow;
 
 public class LoginFlow extends BaseFlow {
     private final AppiumDriver<MobileElement> appiumDriver;

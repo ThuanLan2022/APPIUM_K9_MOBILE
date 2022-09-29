@@ -6,7 +6,7 @@ import io.appium.java_client.MobileElement;
 
 import org.openqa.selenium.Platform;
 import org.testng.annotations.Test;
-import tes_follows.authentication.LoginFlow;
+import test_flows.authentication.LoginFlow;
 
 import java.util.ArrayList;
 import java.util.List;
