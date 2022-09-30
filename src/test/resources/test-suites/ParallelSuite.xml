@@ -5,7 +5,7 @@
         <parameter name="udid" value="3300c56ca62d8309"></parameter>
         <parameter name="systemPort" value="8300"></parameter>
         <classes>
-            <class name="tests.parallel.LoginDevice01"/>
+            <class name="tests.parallel.Login001"/>
         </classes>
     </test>
      <test name="Authentication 02">

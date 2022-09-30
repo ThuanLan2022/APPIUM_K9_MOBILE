@@ -3,6 +3,7 @@ package models.components.login;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
 public class LoginFormComponent {
@@ -13,11 +14,15 @@ public class LoginFormComponent {
     private final static By passwordSel = MobileBy.AccessibilityId("input-password");
     private final static By incorrectPasswordTxtSel = MobileBy.xpath("//*[contains(@text, 'Please enter at least 8 characters')]");
     private final static By loginBtnSel = MobileBy.AccessibilityId("button-LOGIN");
+    //
+    private final static By loginSuccessSel = MobileBy.xpath("//*[contains(@text,'Success')]");
+
 
     public LoginFormComponent(AppiumDriver<MobileElement> appiumDriver) {
         this.appiumDriver = appiumDriver;
     }
 
+    @Step("Input username as {usernameTxt}")
     public void inputUsername(String usernameTxt) {
         if (!usernameTxt.isEmpty()) {
             MobileElement usernameElem = appiumDriver.findElement(usernameSel);
@@ -26,10 +31,12 @@ public class LoginFormComponent {
         }
     }
 
-    public String getInvalidEmailStr(){
+
+    public String getInvalidEmailStr() {
         return appiumDriver.findElement(incorrectEmailTxtSel).getText();
     }
 
+    @Step("Input password as {passwordTxt}")
     public void inputPassword(String passwordTxt) {
         if (!passwordTxt.isEmpty()) {
             MobileElement passwordElem = appiumDriver.findElement(passwordSel);
@@ -38,12 +45,18 @@ public class LoginFormComponent {
         }
     }
 
-    public String getInvalidPasswordStr(){
+    public String getInvalidPasswordStr() {
         return appiumDriver.findElement(incorrectPasswordTxtSel).getText();
     }
 
+    @Step("Click on login button")
     public void clickOnLoginBtn() {
         appiumDriver.findElement(loginBtnSel).click();
+    }
+
+
+    public String getSuccessStr() {
+        return appiumDriver.findElement(loginSuccessSel).getText();
     }
 
 }

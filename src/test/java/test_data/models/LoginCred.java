@@ -18,12 +18,12 @@ public class LoginCred {
             return password;
         }
 
-        @Override
-        public String toString() {
-            return "LoginCred{" +
-                    "email='" + email + '\'' +
-                    ", password='" + password + '\'' +
-                    '}';
-        }
+//        @Override
+//        public String toString() {
+//            return "LoginCred{" +
+//                    "email='" + email + '\'' +
+//                    ", password='" + password + '\'' +
+//                    '}';
+//        }
     }
 

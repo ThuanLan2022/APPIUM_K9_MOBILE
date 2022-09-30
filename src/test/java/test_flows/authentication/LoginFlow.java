@@ -2,8 +2,9 @@ package test_flows.authentication;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import lab_16.models.components.login.LoginFormComponent;
-import lab_16.models.pages.LoginScreen;
+import io.qameta.allure.Step;
+import models.components.login.LoginFormComponent;
+import models.pages.LoginScreen;
 import org.apache.commons.validator.routines.EmailValidator;
 import org.junit.Assert;
 import test_flows.BaseFlow;
@@ -39,42 +40,45 @@ public class LoginFlow extends BaseFlow {
         LoginScreen loginScreen = new LoginScreen(appiumDriver);
         LoginFormComponent loginFormComponent = loginScreen.loginFormComp();
         boolean isEmailValid = EmailValidator.getInstance().isValid(username);
-        boolean isPasswordValil = password.length() >=8;
+        boolean isPasswordValil = password.length() >= 8;
 
-        if(isEmailValid && isPasswordValil){
+        if (isEmailValid && isPasswordValil) {
             verifyCorrectLoginCreds(loginFormComponent);
         }
 
-        if(!isEmailValid){
+        if (!isEmailValid) {
             verifyIncorrectEmail(loginFormComponent);
         }
-        if(!isPasswordValil){
+        if (!isPasswordValil) {
             verifyIncorrectPassword(loginFormComponent);
         }
 
     }
-// SUPPORT METHOD_ben ngoai se ko thay nhung cai verify nay
-    private void verifyCorrectLoginCreds(LoginFormComponent loginFormComp)
-    {
-        String actualLoginStr = loginFormComp.getSuccessStr();
-        String expectedLoginStr="Success";
 
-        System.out.println("actualLoginStr " + actualLoginStr);
-        System.out.println("expectedLoginStr " + expectedLoginStr);
+    // SUPPORT METHOD_ben ngoai se ko thay nhung cai verify nay
+    @Step("Verify correct login credential")
+    private void verifyCorrectLoginCreds(LoginFormComponent loginFormComp) {
+        String actualLoginStr = loginFormComp.getSuccessStr();
+        String expectedLoginStr = "Success";
+        Assert.assertEquals("Success", expectedLoginStr, actualLoginStr);
+//        System.out.println("actualLoginStr " + actualLoginStr);
+//        System.out.println("expectedLoginStr " + expectedLoginStr);
     }
 
+    @Step("Verify incorrect email")
     private void verifyIncorrectEmail(LoginFormComponent loginFormComp) {
-       String actualInvalidEmailStr= loginFormComp.getInvalidEmailStr();
-       String expectedInvalidEmailStr ="Please enter a valid email address";
+        String actualInvalidEmailStr = loginFormComp.getInvalidEmailStr();
+        String expectedInvalidEmailStr = "Please enter a valid email";
         Assert.assertEquals("[ERR] Invalid email str is not correct", expectedInvalidEmailStr, actualInvalidEmailStr);
 //        System.out.println("actualInvalidEmailStr: " + actualInvalidEmailStr);
 //        System.out.println("expectedInvalidEmailStr: " + expectedInvalidEmailStr);
 
     }
 
+    @Step("Verify incorrect password")
     private void verifyIncorrectPassword(LoginFormComponent loginFormComp) {
-        String actualInvalidPasswordStr= loginFormComp.getInvalidPasswordStr();
-        String expectedInvalidPasswordStr ="Please enter at least 8 characters";
+        String actualInvalidPasswordStr = loginFormComp.getInvalidPasswordStr();
+        String expectedInvalidPasswordStr = "Please enter at least 8 characters";
         Assert.assertEquals("[ERR] Invalid email str is not correct", expectedInvalidPasswordStr, actualInvalidPasswordStr);
 //        System.out.println("actualInvalidPasswordStr: " + actualInvalidPasswordStr);
 //        System.out.println("expectedInvalidPasswordStr: " + expectedInvalidPasswordStr);
