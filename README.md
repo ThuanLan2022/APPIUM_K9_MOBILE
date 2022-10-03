@@ -1,2 +1,14 @@
 # APPIUM_K9_MOBILE
 study mobile in K9 class
+
+### **Command to build**
+
+mvn clean package -DskipTests=true
+
+### **Command to run**
+
+Remove all allure-re* folders
+
+### **Execute command**
+
+java -Dplatform=android/ios -Dremote=true/fasle -jar target/appium-k9-mobile-1.0-SNAPSHOT-fat-tests.jar
