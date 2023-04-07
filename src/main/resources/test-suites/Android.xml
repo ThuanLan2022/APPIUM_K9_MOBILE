@@ -2,10 +2,11 @@
 <suite name="Regression" parallel="tests" thread-count="10">
     <test name="Authentication 01" >
         <parameter name="platformName" value="android"/>
-        <parameter name="udid" value="emulator-5554"/>
-        <parameter name="systemPort" value="8300"/>
+        <parameter name="udid" value="3300c56ca62d8309"/>
+        <parameter name="systemPort" value="8500"/>
         <classes>
             <class name="tests.form.FormTest" />
+            <class name="tests.authen.LoginTestWithBaseTest" />
         </classes>
     </test>
 </suite>

@@ -6,11 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="APPIUM_K9_MOBILE" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="APPIUM_K9_MOBILE" target="1.8" />
+      <module name="APPIUM_K9_MOBILE" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
